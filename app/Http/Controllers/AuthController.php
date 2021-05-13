@@ -80,29 +80,6 @@ class AuthController extends Controller
         return env('APP_URL') . '/' . 'activate' . '/' . $activation_token->value . '/' . $user->id . '/' . 'user';
     }
 
-    protected function getUserType($guard)
-    {
-        if ($guard == 'user')
-        {
-            return 'App\Models\User';
-        }
-        else if ($guard == 'admin')
-        {
-            return 'App\Models\Admin';
-        }
-    }
-
-    protected function getGuard($user_type) {
-        if ($user_type == 'App\Models\User')
-        {
-            return 'user';
-        }
-        else if ($user_type == 'App\Models\Admin')
-        {
-            return 'admin';
-        }
-    }
-
     public function register(Request $request)
     {
         $this->validate($request, [
@@ -131,7 +108,7 @@ class AuthController extends Controller
             $activation_token_query->where([
                 'value' => $activation_token,
                 'activation_tokenable_id' => $user_id,
-                'activation_tokenable_type' => $this->getUserType($guard)
+                'activation_tokenable_type' => getUserType($guard)
             ]);
         })->first();
 
@@ -182,12 +159,7 @@ class AuthController extends Controller
 
         return response([
             'message' => 'Login success',
-            'data' => [
-                'session_key' => $access_token['session_key'],
-                'access_token' => $access_token['value'],
-                'user_type' => $this->getGuard($access_token['access_tokenable_type']),
-                'user_id' => $access_token['access_tokenable_id']
-            ]
+            'data' => dataFormatter()->accessToken($access_token)
         ], 200);
     }
 }
