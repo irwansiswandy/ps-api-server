@@ -4,19 +4,14 @@ namespace App\Classes;
 
 class Getter
 {
-    protected $data;
-
-    public function __construct($data = null)
+    public function __construct()
     {
-        if ($data)
-        {
-            $this->data = $data;
-        }
+        //
     }
 
-    public function userType()
+    public function userType($guard)
     {
-        switch ($this->data)
+        switch ($guard)
         {
             case 'user':
                 return 'App\Models\User';
@@ -27,9 +22,9 @@ class Getter
         }
     }
 
-    public function guardName()
+    public function guardName($user_type)
     {
-        switch ($this->data)
+        switch ($user_type)
         {
             case 'App\Models\User':
                 return 'user';

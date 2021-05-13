@@ -4,17 +4,12 @@ namespace App\Classes;
 
 class Formatter
 {
-    protected $data;
-
-    public function __construct($data = null)
+    public function __construct()
     {
-        if ($data)
-        {
-            $this->data = $data;
-        }
+        //
     }
 
-    public function response($message, $data)
+    public function response($message, $data = null)
     {
         return [
             'message' => $message,
@@ -22,13 +17,13 @@ class Formatter
         ];
     }
 
-    public function accessToken()
+    public function accessToken(\App\Models\AccessToken $access_token)
     {
         return [
-            'ACT' => $this->data->value,
-            'SSK' => $this->data->session_key,
-            'GDN' => get($this->data->access_tokenable_type)->guardName(),
-            'UID' => $this->data->access_tokenable_id
+            'ACT' => $access_token->value,
+            'SSK' => $access_token->session_key,
+            'GDN' => getter()->guardName($access_token->access_tokenable_type),
+            'UID' => $access_token->access_tokenable_id
          ];
     }
 }
