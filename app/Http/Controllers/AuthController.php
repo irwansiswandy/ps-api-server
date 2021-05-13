@@ -22,7 +22,18 @@ class AuthController extends Controller
         //
     }
 
-    
+    protected function handleActivationTokenUsed($activation_token, $user_id, $guard)
+    {
+        $activation_token = ActivationToken::where([
+            'value' => $activation_token,
+            'activation_tokenable_id' => $user_id,
+            'activation_tokenable_type' => get($guard)->userType()
+        ])->first();
+
+        $activation_token->value = null;
+        $activation_token->save();
+    }
+
     protected function credentialsIsValid(Request $request, User $user)
     {
         if (!Hash::check($request->input('password'), $user->password))
@@ -94,12 +105,7 @@ class AuthController extends Controller
 
         $activation_token = $this->generateActivationToken($user, 'App\Models\User');
         
-        return response()->json([
-            'message' => 'Account registration succeed, please activate your account to enable login',
-            'data' => [
-                'activation_url' => $this->generateActivationURL($user, $activation_token)
-            ]
-        ]);
+        return response(format()->response('Account registration succeed, please activate your account to enable login', ['activation_url' => $this->generateActivationURL($user, $activation_token)]), 200);
     }
 
     public function activateAccount($activation_token, $user_id, $guard)
@@ -108,21 +114,21 @@ class AuthController extends Controller
             $activation_token_query->where([
                 'value' => $activation_token,
                 'activation_tokenable_id' => $user_id,
-                'activation_tokenable_type' => getUserType($guard)
+                'activation_tokenable_type' => get($guard)->userType()
             ]);
         })->first();
 
         if (!$user)
         {
-            return response([
-                'message' => 'Invalid activation token'
-            ], 422);
+            return response(format()->response('Activation not allowed, invalid token'), 422);
         }   
 
         $user->active = true;
         $user->save();
 
-        return $user;
+        $this->handleActivationTokenUsed($activation_token, $user_id, $guard);
+
+        return response(format()->response('Activation success', $user), 200);
     }
 
     public function login(Request $request)
@@ -136,30 +142,21 @@ class AuthController extends Controller
 
         if (!$user)
         {
-            return response()->json([
-                'message' => 'Account not exists, e-mail not registered'
-            ]);
+            return response(format()->response('E-mail not found, account not exists'), 401);
         }
 
         if (!$this->credentialsIsValid($request, $user))
         {
-            return response()->json([
-                'message' => 'Incorrect password'
-            ]);
+            return response(format()->response('Incorrect password'), 403);
         }
         
         if (!$this->emailIsActive($user))
         {
-            return response()->json([
-                'message' => 'Account not activated'
-            ]);
+            return response(format()->response('Account not activated, please activate account to enable login'), 403);
         }
 
         $access_token = $this->generateAccessToken($request, $user, 'App\Models\User');
 
-        return response([
-            'message' => 'Login success',
-            'data' => dataFormatter()->accessToken($access_token)
-        ], 200);
+        return response(format()->response('Login success', format($access_token)->accessToken()), 200);
     }
 }

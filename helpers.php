@@ -1,11 +1,11 @@
 <?php
 
-function dataFormatter()
+function format($data = null)
 {
-    return new App\Classes\DataFormatter();
+    return new App\Classes\Formatter($data);
 }
 
-function getter()
+function get($data = null)
 {
-    return new App\Classes\Getter();
+    return new App\Classes\Getter($data);
 }
