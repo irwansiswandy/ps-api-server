@@ -110,6 +110,31 @@ class AuthController extends Controller
 
     public function activateAccount($activation_token, $user_id, $guard)
     {
+        $access_token = ActivationToken::where([
+            'activation_tokenable_id' => $user_id,
+            'activation_tokenable_type' => getter()->userType($guard) 
+        ])->first();
+
+        if (!$access_token)
+        {
+            return response(formatter()->response('Activation failed, user not found'), 422);
+        }
+
+        if (!$access_token->value)
+        {
+            return response(formatter()->response('Activation failed, account has been activated'), 422);
+        }
+
+        $access_token->value = null;
+        $access_token->save();
+
+        $model = getter()->userType($guard);
+        $user = $model::find($user_id);
+        $user->active = true;
+        $user->save();
+
+        return response(formatter()->response('Activation succeed, account can be used now', $user), 200);
+        /*
         $user = User::whereHas('activation_token', function ($activation_token_query) use ($activation_token, $user_id, $guard) {
             $activation_token_query->where([
                 'value' => $activation_token,
@@ -133,6 +158,7 @@ class AuthController extends Controller
         $this->handleActivationTokenUsed($activation_token, $user_id, $guard);
 
         return response(formatter()->response('Activation success', $user), 200);
+        */
     }
 
     public function login(Request $request)
