@@ -27,9 +27,21 @@ $router->get('/', function () use ($router) {
     ]);
 });
 
+/*
+ * ---------------------
+ * Authentication routes
+ * ---------------------
+*/
+
 $router->get('activate/{activation_token}/{user_id}/{guard}', ['uses' => 'AuthController@activateAccount']);
 $router->post('register', ['uses' => 'AuthController@register']);
 $router->post('login', ['uses' => 'AuthController@login']);
+
+/*
+ * --------------------------
+ * Users routes
+ * --------------------------
+ */
 
 $router->group([
     'prefix' => 'api',
@@ -40,12 +52,19 @@ $router->group([
     });
 });
 
+/*
+ * --------------------------
+ * Development testing routes
+ * --------------------------
+ */
 $router->group([
     'prefix' => 'test'
 ], function () use ($router) {
+    
     $router->get('authenticated_user', function () use ($router) {
         dd($router->app->auth->guard('api')->user());
     });
+    
     $router->post('authentication', function () use ($router) {
         // Check if email and password are given
         $this->validate($router->app->request, [
@@ -53,5 +72,39 @@ $router->group([
             'password' => 'required'
         ]);
         dd($router->app->request->input('email'));
+    });
+
+    $router->get('mutasi_bca/get', function () use ($router) {
+        $klikbca = new App\Classes\KlikBCA();
+        $data = $klikbca->mutasiSemua('2021-03-01', '2021-03-13')->get();
+    
+        return response([
+            'message' => 'Get data from klikbca succeed',
+            'data' => $data
+        ]);
+    });
+
+    $router->get('mutasi_bca/save', function () use ($router) {
+        $klikbca = new App\Classes\KlikBCA();
+        $klikbca->mutasiSemua('2021-03-01', '2021-03-13')->save();
+    
+        return response([
+            'message' => 'Data from klikbca saved'
+        ]);
+    });
+
+    $router->get('mutasi_bca/store', function () use ($router) {
+        $klikbca = new App\Classes\KlikBCA();
+        $klikbca->mutasiSemua('2021-04-01', '2021-04-30')->store();
+
+        return response([
+            'message' => 'Mutasi BCA has been stored'
+        ]);
+    });
+
+    $router->get('jsonq', function () use ($router) {
+        $contents = file_get_contents(base_path() . '\public' . '\mutasi-bca_2021-03-01-2021-03-13.json');
+
+        return json_decode($contents, true)[0]['description'];
     });
 });

@@ -1,0 +1,526 @@
+[
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/10 544E1",
+            "OEN WENNY APRILIAW",
+            "0000",
+            "112,000.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "FLAZZ BCA",
+            "TOPUP WSID : Z48H1",
+            "5307952020267366",
+            "0998",
+            "100,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "KR OTOMATIS",
+            "TANGGAL :11\/03",
+            "MID : 885000009112",
+            "PRIMA SAKTI-HO",
+            "TGH:     679900.00",
+            "0998",
+            "678,880.15"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING DB",
+            "9702088611-00001",
+            "PENALTY FEE",
+            "6265",
+            "105,922.70"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1103\/FTSCY\/WS95051",
+            "58755.00",
+            "ATC177226572",
+            "ATC177226572",
+            "BUKALAPAKCOM PT",
+            "0000",
+            "58,755.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1103\/FTSCY\/WS95051",
+            "496860.00",
+            "shopee_payout",
+            "161545916000156102",
+            "AIRPAY INTERNATION",
+            "0000",
+            "496,860.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1103\/FTSCY\/WS95011",
+            "1440000.00",
+            "no 386",
+            "primasakti",
+            "MANDIRI ANUGERAH B",
+            "0000",
+            "1,440,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1103\/FTSCY\/WS95011",
+            "3861800.00",
+            "NO 4\/1020",
+            "PRIMASAKTI-SBY",
+            "SETIA BUDIMAN",
+            "0000",
+            "3,861,800.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/12 95031",
+            "FELINCIA",
+            "FELINCIA WAHYUDI",
+            "0000",
+            "39,600.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1203\/FTSCY\/WS95011",
+            "132600.00",
+            "Cetak buklet",
+            "panduan paskah",
+            "STEFANUS WIBOWO",
+            "0000",
+            "132,600.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/12 95031",
+            "RAJAWALI BYR PRINT",
+            "SWANDANI NINGSIH S",
+            "0000",
+            "31,500.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1203\/FTSCY\/WS95051",
+            "1475341.00",
+            "shopee_payout",
+            "161554462900176650",
+            "AIRPAY INTERNATION",
+            "0000",
+            "1,475,341.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-12",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1203\/FTSCY\/WS95051",
+            "220489.00",
+            "WD156318652",
+            "IRWAN SISWANDY",
+            "TOKOPEDIA PT",
+            "0000",
+            "220,489.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "KR OTOMATIS",
+            "TANGGAL :13\/03",
+            "MID : 885000009112",
+            "PRIMA SAKTI-HO",
+            "TGH:     104500.00",
+            "0998",
+            "104,343.25"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/13 95031",
+            "SRI MARGI LESTAMA",
+            "0000",
+            "23,400.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "SETORAN VIA CDM",
+            "TANGGAL :13\/03",
+            "13\/03  WSID:Z48C1",
+            "IRWAN SISWANDY",
+            "0998",
+            "1,850,000.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1303\/FTSCY\/WS95051",
+            "1231801.00",
+            "WD156371024",
+            "IRWAN SISWANDY",
+            "TOKOPEDIA PT",
+            "0000",
+            "1,231,801.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1303\/FTFVA\/WS95011",
+            "70001\/GO-PAY CUSTO",
+            "-",
+            "-",
+            "08563389176",
+            "0000",
+            "151,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "SWITCHING CR",
+            "TANGGAL :13\/03",
+            "TRANSFER   DR 213",
+            "REGINA SIDDHARTA H",
+            "BTPN",
+            "0998",
+            "34,100.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1303\/FTSCY\/WS95011",
+            "505000.00",
+            "primasakti",
+            "YANNY OKTAVIA WIJA",
+            "0000",
+            "505,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1303\/FTSCY\/WS95011",
+            "2350000.00",
+            "16133",
+            "primasakti",
+            "HARI SENANG CV",
+            "0000",
+            "2,350,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1303\/FTSCY\/WS95051",
+            "746003.00",
+            "shopee_payout",
+            "161563016800154616",
+            "AIRPAY INTERNATION",
+            "0000",
+            "746,003.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "KR OTOMATIS",
+            "TANGGAL :14\/03",
+            "MID : 885000009112",
+            "PRIMA SAKTI-HO",
+            "TGH:     325715.00",
+            "0998",
+            "325,226.43"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "KARTU KREDIT",
+            "TANGGAL :14\/03",
+            "MID:000009112",
+            "PRIMA SAKTI-HO",
+            "TGH:00001066700.00",
+            "0960",
+            "1,045,366.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1403\/FTSCY\/WS95051",
+            "388567.00",
+            "WD156465058",
+            "IRWAN SISWANDY",
+            "TOKOPEDIA PT",
+            "0000",
+            "388,567.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1403\/FTFVA\/WS95011",
+            "70001\/GO-PAY CUSTO",
+            "-",
+            "-",
+            "08563389176",
+            "0000",
+            "201,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1403\/FTSCY\/WS95051",
+            "139964.00",
+            "shopee_payout",
+            "161571503000120182",
+            "AIRPAY INTERNATION",
+            "0000",
+            "139,964.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1403\/FTSCY\/WS95011",
+            "5000000.00",
+            "no 42",
+            "primasakti",
+            "ALBERTUS GIAMSYAH",
+            "0000",
+            "5,000,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1503\/FTSCY\/WS95051",
+            "262579.00",
+            "WD156526278",
+            "IRWAN SISWANDY",
+            "TOKOPEDIA PT",
+            "0000",
+            "262,579.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1503\/FTSCY\/WS95051",
+            "44850.00",
+            "5120169060",
+            "213F0RFD00288166",
+            "VISIONET INTERNASI",
+            "0000",
+            "44,850.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/15 95031",
+            "PRINT STICKER VINY",
+            "L",
+            "CHRISTOPHER RANDY",
+            "0000",
+            "28,000.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1503\/FTSCY\/WS95011",
+            "550000.00",
+            "primasakti",
+            "sisa jam 17.00",
+            "RIDO WASONGKO",
+            "0000",
+            "550,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/15 95031",
+            "ORDER CINDY, TKS",
+            "MONICA CHRISTY WON",
+            "0000",
+            "170,000.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/15 95031",
+            "DEVIYANA",
+            "DEVIYANA SOETJIPTO",
+            "0000",
+            "28,700.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1503\/FTSCY\/WS95051",
+            "1856282.00",
+            "shopee_payout",
+            "161580290800175968",
+            "AIRPAY INTERNATION",
+            "0000",
+            "1,856,282.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1503\/FTSCY\/WS95011",
+            "2000000.00",
+            "883,285",
+            "primasakti",
+            "RIDO WASONGKO",
+            "0000",
+            "2,000,000.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "SETORAN VIA CDM",
+            "15\/03  WSID:Z77Q1",
+            "IRWAN SISWANDY",
+            "0998",
+            "700,000.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "1503\/FTSCY\/WS95051",
+            "750605.00",
+            "SM-0315100487112",
+            "JINGDONG INDONESIA",
+            "0000",
+            "750,605.00"
+        ],
+        "flows": "CR"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING DB",
+            "1503\/FTSCY\/WS95011",
+            "560500.00",
+            "primasakti",
+            "irwansis1022",
+            "RIDO WASONGKO",
+            "0000",
+            "560,500.00"
+        ],
+        "flows": "DB"
+    },
+    {
+        "date": "2021-03-15",
+        "description": [
+            "TRSF E-BANKING CR",
+            "03\/15 95031",
+            "OSHI PAULINA",
+            "0000",
+            "12,900.00"
+        ],
+        "flows": "CR"
+    }
+]
