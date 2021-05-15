@@ -7,9 +7,14 @@ use \App\Models\KlikbcaTransaction;
 
 class KlikBCA
 {
-    protected $username = 'irwansis1022', $password = '140986';
-    protected $date_from, $date_to;
-    protected $bca_parser, $parsed_data;
+    protected $username = 'irwansis1022',
+              $password = '140986',
+              $bca_parser;
+    
+    protected $date_from,
+              $date_to;
+    
+    protected $parsed_data;
 
     public function __construct()
     {
